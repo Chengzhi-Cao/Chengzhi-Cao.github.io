@@ -86,8 +86,27 @@
 				</p> -->
 			</td>
 			<td>
-				<img src="./pic/v7.png" border="0" width="550" onmouseover="this.src='./pic/v13.png'" onmouseout="this.src='./pic/v7.png'" alt=""><br>
+				<!-- <img src="./pic/v7.png" border="0" width="550" onmouseover="this.src='./pic/v13.png'" onmouseout="this.src='./pic/v7.png'" alt=""><br> -->
 
+        <img src="./pic/v7.png" id="image" border="0" width="550">
+
+        <script>
+          var arr=new Array()
+          arr[0]="./pic/v7.png";
+          arr[1]="./pic/v8.png";
+          arr[2]="./pic/v9.png";
+          var i=0;
+          function image()
+          {
+              var image=document.getElementById("image");
+              image.src=arr[i];
+              i++;
+              if(i>2){i=0};             
+          };
+          setInterval(function(){
+          image();
+          },500);
+      </script>
         <!-- <div class="slideshow">
           <img class="slide" src="./pic/v7.png" border="0" width="550" alt="Image 1">
           <img class="slide" src="./pic/v8.png" border="0" width="550" alt="Image 2">
