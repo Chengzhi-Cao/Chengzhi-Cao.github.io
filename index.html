@@ -72,36 +72,26 @@
 				</p> -->
 			</td>
 			<td>
-				<img src="./pic/v7.png" border="0" width="550" onmouseover="this.src='./pic/v13.png'" onmouseout="this.src='./pic/v7.png'" alt=""><br>
-        <!-- arr0="./pic/v7.png"
-        arr1="./pic/v8.png"
-        arr2="./pic/v9.png"
-        arr3="./pic/v10.png"
-        arr4="./pic/v11.png"
-        arr5="./pic/v12.png"
-        arr6="./pic/v13.png"
-        
+				<!-- <img src="./pic/v7.png" border="0" width="550" onmouseover="this.src='./pic/v13.png'" onmouseout="this.src='./pic/v7.png'" alt=""><br> -->
+
+        <div class="slideshow">
+          <img class="slide" src="./pic/v7.png" alt="Image 1">
+          <img class="slide" src="./pic/v8.png" alt="Image 2">
+          <img class="slide" src="./pic/v9.png" alt="Image 3">
+        </div>
+      
         <script>
-          var arr=new Array()
-          arr[0]="./pic/v7.png";
-          arr[1]="./pic/v8.png";
-          arr[2]="./pic/v9.png";
-          arr[3]="./pic/v10.png";
-          arr[4]="./pic/v11.png";
-          arr[5]="./pic/v12.png";
-          arr[6]="./pic/v13.png";
-          
-          var i=0;
-          function image()
-          {
-              var image=document.getElementById("image");
-              image.src=arr[i];
-              i++;
-              if(i>2){i=0};             
-          };
-          setInterval(function(){
-          image();
-          },5); -->
+          var slides = document.querySelectorAll('.slide');
+          var currentSlide = 0;
+          var slideInterval = setInterval(nextSlide, 2000); // 每2秒切换一次
+      
+          function nextSlide() {
+            slides[currentSlide].style.opacity = 0;
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].style.opacity = 1;
+          }
+        </script>
+
       </script>
         <!-- <img src="./pic/v1.gif" border="0" width="550"><br> -->
 			</td>
