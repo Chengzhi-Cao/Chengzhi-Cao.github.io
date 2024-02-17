@@ -88,7 +88,20 @@
 
 <script>
 window.onload = function (){
-  document.querySelector("#music").click()
+
+  var time = 2;
+  var secondEle = document.getElementById("second");
+  var timer = setInterval(function(){
+      secondEle.innerHTML = time;
+      time--;
+      if(time==0){
+          clearInterval(timer);
+          location.href="index2.html";
+          document.querySelector("#music").click()
+      }
+          
+  },4);
+  <!-- document.querySelector("#music").click() -->
 }
 </script>
 
